@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Neha Shazneen | AI & ML Portfolio</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        /* =========================
+           GENERAL
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #0b0f19;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1150px;
+            margin: auto;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(11, 15, 25, 0.92);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        nav {
+            height: 75px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: 800;
+            color: #ffffff;
+        }
+
+        .logo span {
+            color: #6c63ff;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 28px;
+        }
+
+        .nav-links a {
+            color: #dddddd;
+            font-size: 14px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #6c63ff;
+        }
+
+        .menu-btn {
+            display: none;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        #home {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 75px;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1.3fr 0.7fr;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .hero-text small {
+            color: #6c63ff;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .hero-text h1 {
+            font-size: clamp(42px, 7vw, 75px);
+            line-height: 1.1;
+            margin: 12px 0;
+            font-weight: 800;
+        }
+
+        .hero-text h1 span {
+            color: #6c63ff;
+        }
+
+        .hero-text h2 {
+            font-size: 25px;
+            color: #cfcfcf;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            max-width: 650px;
+            color: #aeb4c0;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: #6c63ff;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(108,99,255,0.35);
+        }
+
+        .btn-outline {
+            border: 1px solid #6c63ff;
+            color: #ffffff;
+        }
+
+        .btn-outline:hover {
+            background: #6c63ff;
+            transform: translateY(-3px);
+        }
+
+        .hero-card {
+            display: flex;
+            justify-content: center;
+        }
+
+        .profile-circle {
+            width: 290px;
+            height: 290px;
+            border-radius: 50%;
+            border: 2px solid #6c63ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle, #181d31, #0b0f19);
+            box-shadow: 0 0 70px rgba(108,99,255,0.18);
+        }
+
+        .profile-circle i {
+            font-size: 105px;
+            color: #6c63ff;
+        }
+
+
+        /* =========================
+           SECTIONS
+        ========================= */
+
+        section {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-title h2 {
+            font-size: 35px;
+            font-weight: 700;
+        }
+
+        .section-title span {
+            color: #6c63ff;
+        }
+
+        .section-title p {
+            color: #8f96a3;
+            margin-top: 8px;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .about-card {
+            background: #111625;
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 18px;
+            padding: 30px;
+        }
+
+        .about-card h3 {
+            color: #6c63ff;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .about-card p {
+            color: #b6bcc8;
+            font-size: 15px;
+        }
+
+        .info-list {
+            list-style: none;
+        }
+
+        .info-list li {
+            margin-bottom: 14px;
+            color: #c5c9d1;
+        }
+
+        .info-list i {
+            color: #6c63ff;
+            width: 25px;
+        }
+
+
+        /* =========================
+           EXPERIENCE
+        ========================= */
+
+        .experience-card {
+            background: #111625;
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 18px;
+            padding: 30px;
+            max-width: 850px;
+            margin: auto;
+            position: relative;
+        }
+
+        .experience-card h3 {
+            font-size: 22px;
+            color: white;
+        }
+
+        .experience-card h4 {
+            color: #6c63ff;
+            margin: 5px 0;
+            font-weight: 500;
+        }
+
+        .experience-date {
+            color: #8f96a3;
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+
+        .experience-card ul {
+            padding-left: 20px;
+            color: #b7bdc9;
+        }
+
+        .experience-card li {
+            margin-bottom: 10px;
+        }
+
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: #111625;
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 15px;
+            padding: 25px;
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            border-color: #6c63ff;
+        }
+
+        .skill-card i {
+            font-size: 30px;
+            color: #6c63ff;
+            margin-bottom: 15px;
+        }
+
+        .skill-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .skill-card p {
+            color: #aeb4c0;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           PROJECTS
+        ========================= */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            background: #111625;
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 18px;
+            padding: 28px;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-7px);
+            border-color: #6c63ff;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+        }
+
+        .project-icon {
+            width: 55px;
+            height: 55px;
+            border-radius: 12px;
+            background: rgba(108,99,255,0.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 18px;
+        }
+
+        .project-icon i {
+            font-size: 23px;
+            color: #6c63ff;
+        }
+
+        .project-card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            color: #aeb4c0;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tech span {
+            background: #1b2133;
+            color: #bfc5d2;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 11px;
+        }
+
+
+        /* =========================
+           PATENTS
+        ========================= */
+
+        .patents-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .patent-card {
+            background: #111625;
+            padding: 28px;
+            border-radius: 18px;
+            border: 1px solid rgba(255,255,255,0.07);
+        }
+
+        .patent-card h3 {
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+
+        .patent-card p {
+            color: #aeb4c0;
+            font-size: 14px;
+        }
+
+        .patent-card i {
+            color: #6c63ff;
+            margin-right: 10px;
+        }
+
+
+        /* =========================
+           ACCOMPLISHMENTS
+        ========================= */
+
+        .achievement-list {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .achievement {
+            display: flex;
+            gap: 20px;
+            background: #111625;
+            padding: 22px;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            border-left: 3px solid #6c63ff;
+        }
+
+        .achievement i {
+            color: #6c63ff;
+            font-size: 24px;
+            margin-top: 4px;
+        }
+
+        .achievement p {
+            color: #b7bdc9;
+            font-size: 14px;
+        }
+
+        .achievement strong {
+            color: white;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact-box {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+            background: #111625;
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 20px;
+            padding: 45px 25px;
+        }
+
+        .contact-box h3 {
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+
+        .contact-box p {
+            color: #aeb4c0;
+            margin-bottom: 25px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #1b2133;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            background: #6c63ff;
+            transform: translateY(-4px);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            border-top: 1px solid rgba(255,255,255,0.07);
+            text-align: center;
+            padding: 25px;
+            color: #7f8795;
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            .nav-links {
+                position: absolute;
+                top: 75px;
+                left: 0;
+                width: 100%;
+                background: #0b0f19;
+                flex-direction: column;
+                align-items: center;
+                padding: 25px 0;
+                display: none;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-card {
+                order: -1;
+            }
+
+            .profile-circle {
+                width: 220px;
+                height: 220px;
+            }
+
+            .profile-circle i {
+                font-size: 80px;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .patents-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        @media (max-width: 550px) {
+
+            .container {
+                width: 92%;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text h1 {
+                font-size: 42px;
+            }
+
+            .section-title h2 {
+                font-size: 28px;
+            }
+
+            .profile-circle {
+                width: 190px;
+                height: 190px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<header>
+
+    <div class="container">
+
+        <nav>
+
+            <div class="logo">
+                Neha<span>.</span>
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+
+                <li><a href="#home">Home</a></li>
+
+                <li><a href="#about">About</a></li>
+
+                <li><a href="#experience">Experience</a></li>
+
+                <li><a href="#skills">Skills</a></li>
+
+                <li><a href="#projects">Projects</a></li>
+
+                <li><a href="#patents">Patents</a></li>
+
+                <li><a href="#achievements">Achievements</a></li>
+
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+
+            <div class="menu-btn" id="menuBtn">
+                <i class="fas fa-bars"></i>
+            </div>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================
+     HOME
+========================= -->
+
+<section id="home">
+
+    <div class="container">
+
+        <div class="hero">
+
+            <div class="hero-text">
+
+                <small>HELLO, I'M</small>
+
+                <h1>
+                    Neha <span>Shazneen</span>
+                </h1>
+
+                <h2>
+                    Computer Science Engineering Student
+                </h2>
+
+                <p>
+                    Passionate about Artificial Intelligence, Machine Learning,
+                    Data Analytics and building technology-driven solutions
+                    for real-world problems.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-code"></i>
+                        View Projects
+                    </a>
+
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fas fa-envelope"></i>
+                        Contact Me
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-card">
+
+                <div class="profile-circle">
+
+                    <i class="fas fa-user-graduate"></i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>About <span>Me</span></h2>
+
+            <p>Get to know me</p>
+
+        </div>
+
+
+        <div class="about-content">
+
+            <div class="about-card">
+
+                <h3>Who I Am</h3>
+
+                <p>
+                    I am Neha Shazneen, a Computer Science and Engineering
+                    student at SR University with an interest in Artificial
+                    Intelligence, Machine Learning and Data Analytics.
+                </p>
+
+                <br>
+
+                <p>
+                    I enjoy developing practical technology solutions and
+                    working on projects that address real-world challenges.
+                </p>
+
+            </div>
+
+
+            <div class="about-card">
+
+                <h3>Quick Information</h3>
+
+                <ul class="info-list">
+
+                    <li>
+                        <i class="fas fa-location-dot"></i>
+                        Warangal, Telangana, India
+                    </li>
+
+                    <li>
+                        <i class="fas fa-graduation-cap"></i>
+                        B.Tech - Computer Science and Engineering
+                    </li>
+
+                    <li>
+                        <i class="fas fa-university"></i>
+                        SR University
+                    </li>
+
+                    <li>
+                        <i class="fas fa-chart-line"></i>
+                        CGPA: 6.5
+                    </li>
+
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        shazneenneha716@gmail.com
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     EXPERIENCE
+========================= -->
+
+<section id="experience">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>My <span>Experience</span></h2>
+
+            <p>Professional experience</p>
+
+        </div>
+
+
+        <div class="experience-card">
+
+            <h3>1Stop.ai (Fox Trading)</h3>
+
+            <h4>Machine Learning Intern (Remote)</h4>
+
+            <div class="experience-date">
+                Jun 2026 – Jul 2026
+            </div>
+
+            <ul>
+
+                <li>
+                    Developed Machine Learning projects involving data
+                    preprocessing, feature engineering, model training
+                    and evaluation.
+                </li>
+
+                <li>
+                    Collaborated with mentors to deliver project milestones
+                    using Python and Scikit-learn.
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     SKILLS
+========================= -->
+
+<section id="skills">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Technical <span>Skills</span></h2>
+
+            <p>Technologies and tools I work with</p>
+
+        </div>
+
+
+        <div class="skills-grid">
+
+
+            <div class="skill-card">
+
+                <i class="fas fa-code"></i>
+
+                <h3>Programming</h3>
+
+                <p>
+                    Python, C
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <i class="fas fa-database"></i>
+
+                <h3>Databases</h3>
+
+                <p>
+                    SQL, PL/SQL
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <i class="fas fa-globe"></i>
+
+                <h3>Web</h3>
+
+                <p>
+                    HTML, CSS, JavaScript
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <i class="fas fa-brain"></i>
+
+                <h3>Libraries</h3>
+
+                <p>
+                    NumPy, Pandas, OpenCV, Scikit-learn
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <i class="fas fa-tools"></i>
+
+                <h3>Tools</h3>
+
+                <p>
+                    Git, GitHub, VS Code
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <i class="fas fa-book"></i>
+
+                <h3>Coursework</h3>
+
+                <p>
+                    DSA, DBMS, OS, CN, OOP
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PROJECTS
+========================= -->
+
+<section id="projects">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>My <span>Projects</span></h2>
+
+            <p>Some of my featured work</p>
+
+        </div>
+
+
+        <div class="projects-grid">
+
+
+            <!-- Project 1 -->
+
+            <div class="project-card">
+
+                <div class="project-icon">
+
+                    <i class="fas fa-hospital"></i>
+
+                </div>
+
+                <h3>
+                    Hospital Bed and Resource Orchestrator
+                </h3>
+
+                <p>
+                    Developed a real-time dashboard for ICU bed availability,
+                    ambulance tracking and emergency resource allocation.
+                    Improved emergency response by enabling efficient
+                    allocation of hospital resources.
+                </p>
+
+                <div class="tech">
+
+                    <span>Python</span>
+                    <span>Flask</span>
+                    <span>MySQL</span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Project 2 -->
+
+            <div class="project-card">
+
+                <div class="project-icon">
+
+                    <i class="fas fa-triangle-exclamation"></i>
+
+                </div>
+
+                <h3>
+                    Disaster Alert & Risk Zone Visualizer
+                </h3>
+
+                <p>
+                    Built an interactive dashboard for disaster risk
+                    visualization using real-time monitoring. Improved
+                    situational awareness through data-driven visual analytics.
+                </p>
+
+                <div class="tech">
+
+                    <span>Python</span>
+                    <span>Plotly</span>
+                    <span>Pandas</span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Project 3 -->
+
+            <div class="project-card">
+
+                <div class="project-icon">
+
+                    <i class="fas fa-graduation-cap"></i>
+
+                </div>
+
+                <h3>
+                    Predictive Analysis of Student Academic Performance Using Machine Learning
+                </h3>
+
+                <p>
+                    Developed and evaluated machine learning models for
+                    predicting student academic performance. Analyzed academic
+                    and demographic factors to support performance prediction.
+                </p>
+
+                <div class="tech">
+
+                    <span>Python</span>
+                    <span>Scikit-learn</span>
+                    <span>Machine Learning</span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Project 4 -->
+
+            <div class="project-card">
+
+                <div class="project-icon">
+
+                    <i class="fas fa-eye"></i>
+
+                </div>
+
+                <h3>
+                    Drowsiness Detection System
+                </h3>
+
+                <p>
+                    Built a real-time driver drowsiness detection system
+                    using facial landmarks. Triggered instant alerts to
+                    improve road safety.
+                </p>
+
+                <div class="tech">
+
+                    <span>Python</span>
+                    <span>OpenCV</span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PATENTS
+========================= -->
+
+<section id="patents">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>My <span>Patents</span></h2>
+
+            <p>Innovation and ideas</p>
+
+        </div>
+
+
+        <div class="patents-grid">
+
+
+            <div class="patent-card">
+
+                <h3>
+                    <i class="fas fa-lightbulb"></i>
+                    Inventory Management Device
+                </h3>
+
+                <p>
+                    Designed a smart inventory monitoring system using sensors
+                    and automation. Integrated imaging units and robotic trays
+                    for efficient inventory handling.
+                </p>
+
+            </div>
+
+
+            <div class="patent-card">
+
+                <h3>
+                    <i class="fas fa-car"></i>
+                    Automated Vehicle Towing System
+                </h3>
+
+                <p>
+                    Designed an intelligent system for automatic vehicle
+                    detection. Enabled automated towing of vehicles parked
+                    beyond designated boundary limits.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     ACCOMPLISHMENTS
+========================= -->
+
+<section id="achievements">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Accomplishments & <span>Achievements</span></h2>
+
+            <p>Milestones and recognitions</p>
+
+        </div>
+
+
+        <div class="achievement-list">
+
+
+            <div class="achievement">
+
+                <i class="fas fa-trophy"></i>
+
+                <p>
+                    Led a winning team in the
+                    <strong>Udbhava Hackathon</strong>
+                    conducted by SR University, developing a Hospital
+                    Resource Orchestrator that enabled intelligent ambulance
+                    routing and real-time hospital resource management;
+                    secured <strong>First Place</strong> among 20+
+                    participating teams.
+                </p>
+
+            </div>
+
+
+            <div class="achievement">
+
+                <i class="fas fa-medal"></i>
+
+                <p>
+                    Secured <strong>12th Rank</strong> in the
+                    <strong>LaunchpadX Innovation Hackathon</strong>
+                    at <strong>SNIST, Hyderabad</strong>, among
+                    <strong>219 teams</strong>.
+                </p>
+
+            </div>
+
+
+            <div class="achievement">
+
+                <i class="fas fa-robot"></i>
+
+                <p>
+                    Worked in the <strong>Agent Hub</strong> domain and
+                    developed <strong>FarmPilot</strong>, an AI-powered
+                    agriculture problem-solving agent designed to assist
+                    farmers with practical farming challenges.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Get In <span>Touch</span></h2>
+
+            <p>Let's connect and build something meaningful</p>
+
+        </div>
+
+
+        <div class="contact-box">
+
+            <h3>Let's Connect</h3>
+
+            <p>
+                Feel free to reach out to me for opportunities,
+                collaborations or project discussions.
+            </p>
+
+
+            <div class="hero-buttons"
+                 style="justify-content:center; margin-bottom:25px;">
+
+                <a href="mailto:shazneenneha716@gmail.com"
+                   class="btn btn-primary">
+
+                    <i class="fas fa-envelope"></i>
+
+                    Email Me
+
+                </a>
+
+            </div>
+
+
+            <div class="social-links">
+
+                <!-- LinkedIn -->
+
+                <a href="https://linkedin.com/in/neha-shazneen-846126351"
+                   target="_blank"
+                   title="LinkedIn">
+
+                    <i class="fab fa-linkedin-in"></i>
+
+                </a>
+
+
+                <!-- GitHub -->
+
+                <a href="https://github.com"
+                   target="_blank"
+                   title="GitHub">
+
+                    <i class="fab fa-github"></i>
+
+                </a>
+
+
+                <!-- Email -->
+
+                <a href="mailto:shazneenneha716@gmail.com"
+                   title="Email">
+
+                    <i class="fas fa-envelope"></i>
+
+                </a>
+
+
+                <!-- Phone -->
+
+                <a href="tel:9346549595"
+                   title="Phone">
+
+                    <i class="fas fa-phone"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <p>
+        © 2026 Neha Shazneen. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+    const menuBtn = document.getElementById("menuBtn");
+
+    const navLinks = document.getElementById("navLinks");
+
+
+    menuBtn.addEventListener("click", function() {
+
+        navLinks.classList.toggle("active");
+
+    });
+
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+
+        link.addEventListener("click", function() {
+
+            navLinks.classList.remove("active");
+
+        });
+
+    });
+
+</script>
+
+
+</body>
+</html>
