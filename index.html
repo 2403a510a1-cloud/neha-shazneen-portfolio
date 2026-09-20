@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Neha Shazneen | AI & ML Portfolio</title>
+    <title>Neha Shazneen | Portfolio</title>
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
     <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <style>
 
@@ -29,9 +32,9 @@
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
-            background: #0b0f19;
-            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            background: #f8fafc;
+            color: #172033;
             line-height: 1.6;
         }
 
@@ -57,49 +60,54 @@
             left: 0;
             width: 100%;
             z-index: 1000;
-            background: rgba(11, 15, 25, 0.92);
+
+            background: rgba(248, 250, 252, 0.96);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255,255,255,0.08);
+
+            border-bottom: 1px solid #e2e8f0;
         }
 
         nav {
             height: 75px;
+
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
         }
 
         .logo {
             font-size: 25px;
             font-weight: 800;
-            color: #ffffff;
+            color: #102a43;
         }
 
         .logo span {
-            color: #6c63ff;
+            color: #0f766e;
         }
 
         .nav-links {
             display: flex;
+            gap: 30px;
             list-style: none;
-            gap: 28px;
         }
 
         .nav-links a {
-            color: #dddddd;
+            color: #475569;
             font-size: 14px;
             font-weight: 500;
+
             transition: 0.3s;
         }
 
         .nav-links a:hover {
-            color: #6c63ff;
+            color: #0f766e;
         }
 
         .menu-btn {
             display: none;
-            font-size: 25px;
+            font-size: 24px;
             cursor: pointer;
+            color: #102a43;
         }
 
 
@@ -109,107 +117,166 @@
 
         #home {
             min-height: 100vh;
+            padding-top: 75px;
+
             display: flex;
             align-items: center;
-            padding-top: 75px;
+
+            background: #f8fafc;
         }
 
         .hero {
             display: grid;
-            grid-template-columns: 1.3fr 0.7fr;
+            grid-template-columns: 1.1fr 0.9fr;
+
             align-items: center;
-            gap: 50px;
+
+            gap: 70px;
         }
 
         .hero-text small {
-            color: #6c63ff;
-            font-size: 16px;
-            font-weight: 600;
+            color: #0f766e;
+
+            font-size: 15px;
+            font-weight: 700;
+
+            letter-spacing: 2px;
         }
 
         .hero-text h1 {
-            font-size: clamp(42px, 7vw, 75px);
-            line-height: 1.1;
+            font-size: clamp(45px, 6vw, 75px);
+
+            line-height: 1.08;
+
             margin: 12px 0;
+
             font-weight: 800;
+
+            color: #102a43;
         }
 
         .hero-text h1 span {
-            color: #6c63ff;
+            color: #0f766e;
         }
 
         .hero-text h2 {
+            color: #334e68;
+
             font-size: 25px;
-            color: #cfcfcf;
+
             font-weight: 500;
+
             margin-bottom: 20px;
         }
 
         .hero-text p {
+            color: #627d98;
+
             max-width: 650px;
-            color: #aeb4c0;
+
             font-size: 16px;
+
             margin-bottom: 30px;
         }
+
+
+        /* =========================
+           BUTTONS
+        ========================= */
 
         .hero-buttons {
             display: flex;
             gap: 15px;
+
             flex-wrap: wrap;
         }
 
         .btn {
-            padding: 12px 24px;
-            border-radius: 30px;
-            font-weight: 600;
-            transition: 0.3s;
+            padding: 13px 25px;
+
+            border-radius: 7px;
+
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+
+            gap: 9px;
+
+            font-weight: 600;
+
+            transition: 0.3s;
         }
 
         .btn-primary {
-            background: #6c63ff;
+            background: #0f766e;
+
             color: white;
         }
 
         .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(108,99,255,0.35);
+            background: #115e59;
+
+            transform: translateY(-2px);
         }
 
         .btn-outline {
-            border: 1px solid #6c63ff;
-            color: #ffffff;
+            border: 1px solid #94a3b8;
+
+            color: #102a43;
+
+            background: white;
         }
 
         .btn-outline:hover {
-            background: #6c63ff;
-            transform: translateY(-3px);
+            border-color: #0f766e;
+
+            color: #0f766e;
+
+            transform: translateY(-2px);
         }
+
+
+        /* =========================
+           PROFILE PHOTO
+        ========================= */
 
         .hero-card {
             display: flex;
+
             justify-content: center;
         }
 
-        .profile-circle {
-            width: 290px;
-            height: 290px;
-            border-radius: 50%;
-            border: 2px solid #6c63ff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: radial-gradient(circle, #181d31, #0b0f19);
-            box-shadow: 0 0 70px rgba(108,99,255,0.18);
+        .profile-frame {
+            width: 360px;
+            height: 420px;
+
+            background: #e2e8f0;
+
+            padding: 10px;
+
+            border-radius: 14px;
+
+            box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
         }
 
-        .profile-circle img {
-             width: 100%;
-             height: 100%;
-             object-fit: cover;
-             border-radius: 50%;
+        .profile-frame img {
+            width: 100%;
+            height: 100%;
+
+            display: block;
+
+            object-fit: cover;
+
+            /*
+             * This controls which part of your
+             * photo is visible.
+             *
+             * 35% keeps the face/upper body
+             * more visible and crops unwanted
+             * lower portions.
+             */
+            object-position: center 35%;
+
+            border-radius: 8px;
         }
 
 
@@ -223,20 +290,23 @@
 
         .section-title {
             text-align: center;
-            margin-bottom: 55px;
+
+            margin-bottom: 50px;
         }
 
         .section-title h2 {
             font-size: 35px;
-            font-weight: 700;
+
+            color: #102a43;
         }
 
         .section-title span {
-            color: #6c63ff;
+            color: #0f766e;
         }
 
         .section-title p {
-            color: #8f96a3;
+            color: #627d98;
+
             margin-top: 8px;
         }
 
@@ -247,25 +317,35 @@
 
         .about-content {
             display: grid;
+
             grid-template-columns: 1fr 1fr;
-            gap: 40px;
+
+            gap: 25px;
         }
 
         .about-card {
-            background: #111625;
-            border: 1px solid rgba(255,255,255,0.07);
-            border-radius: 18px;
+            background: white;
+
+            border: 1px solid #e2e8f0;
+
+            border-radius: 12px;
+
             padding: 30px;
+
+            box-shadow: 0 8px 25px rgba(15, 23, 42, 0.04);
         }
 
         .about-card h3 {
-            color: #6c63ff;
+            color: #102a43;
+
             margin-bottom: 15px;
-            font-size: 22px;
+
+            font-size: 21px;
         }
 
         .about-card p {
-            color: #b6bcc8;
+            color: #627d98;
+
             font-size: 15px;
         }
 
@@ -275,11 +355,13 @@
 
         .info-list li {
             margin-bottom: 14px;
-            color: #c5c9d1;
+
+            color: #486581;
         }
 
         .info-list i {
-            color: #6c63ff;
+            color: #0f766e;
+
             width: 25px;
         }
 
@@ -289,35 +371,49 @@
         ========================= */
 
         .experience-card {
-            background: #111625;
-            border: 1px solid rgba(255,255,255,0.07);
-            border-radius: 18px;
-            padding: 30px;
             max-width: 850px;
+
             margin: auto;
-            position: relative;
+
+            background: white;
+
+            border: 1px solid #e2e8f0;
+
+            border-left: 4px solid #0f766e;
+
+            border-radius: 10px;
+
+            padding: 30px;
+
+            box-shadow: 0 8px 25px rgba(15, 23, 42, 0.04);
         }
 
         .experience-card h3 {
             font-size: 22px;
-            color: white;
+
+            color: #102a43;
         }
 
         .experience-card h4 {
-            color: #6c63ff;
-            margin: 5px 0;
-            font-weight: 500;
+            color: #0f766e;
+
+            font-weight: 600;
+
+            margin: 4px 0;
         }
 
         .experience-date {
-            color: #8f96a3;
+            color: #829ab1;
+
             font-size: 14px;
+
             margin-bottom: 18px;
         }
 
         .experience-card ul {
             padding-left: 20px;
-            color: #b7bdc9;
+
+            color: #627d98;
         }
 
         .experience-card li {
@@ -331,35 +427,47 @@
 
         .skills-grid {
             display: grid;
+
             grid-template-columns: repeat(3, 1fr);
+
             gap: 20px;
         }
 
         .skill-card {
-            background: #111625;
-            border: 1px solid rgba(255,255,255,0.07);
-            border-radius: 15px;
+            background: white;
+
+            border: 1px solid #e2e8f0;
+
+            border-radius: 12px;
+
             padding: 25px;
+
             transition: 0.3s;
         }
 
         .skill-card:hover {
-            transform: translateY(-5px);
-            border-color: #6c63ff;
+            transform: translateY(-4px);
+
+            border-color: #0f766e;
         }
 
         .skill-card i {
-            font-size: 30px;
-            color: #6c63ff;
+            font-size: 27px;
+
+            color: #0f766e;
+
             margin-bottom: 15px;
         }
 
         .skill-card h3 {
-            margin-bottom: 10px;
+            color: #102a43;
+
+            margin-bottom: 8px;
         }
 
         .skill-card p {
-            color: #aeb4c0;
+            color: #627d98;
+
             font-size: 14px;
         }
 
@@ -370,62 +478,87 @@
 
         .projects-grid {
             display: grid;
+
             grid-template-columns: repeat(2, 1fr);
+
             gap: 25px;
         }
 
         .project-card {
-            background: #111625;
-            border: 1px solid rgba(255,255,255,0.07);
-            border-radius: 18px;
+            background: white;
+
+            border: 1px solid #e2e8f0;
+
+            border-radius: 12px;
+
             padding: 28px;
+
             transition: 0.3s;
         }
 
         .project-card:hover {
-            transform: translateY(-7px);
-            border-color: #6c63ff;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+            transform: translateY(-5px);
+
+            border-color: #0f766e;
+
+            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
         }
 
         .project-icon {
-            width: 55px;
-            height: 55px;
-            border-radius: 12px;
-            background: rgba(108,99,255,0.12);
+            width: 52px;
+            height: 52px;
+
+            border-radius: 10px;
+
+            background: #ecfdf5;
+
             display: flex;
+
             align-items: center;
             justify-content: center;
+
             margin-bottom: 18px;
         }
 
         .project-icon i {
-            font-size: 23px;
-            color: #6c63ff;
+            color: #0f766e;
+
+            font-size: 22px;
         }
 
         .project-card h3 {
-            font-size: 20px;
+            color: #102a43;
+
+            font-size: 19px;
+
             margin-bottom: 10px;
         }
 
         .project-card p {
-            color: #aeb4c0;
+            color: #627d98;
+
             font-size: 14px;
+
             margin-bottom: 15px;
         }
 
         .tech {
             display: flex;
+
             flex-wrap: wrap;
+
             gap: 8px;
         }
 
         .tech span {
-            background: #1b2133;
-            color: #bfc5d2;
+            background: #f1f5f9;
+
+            color: #475569;
+
             padding: 5px 10px;
-            border-radius: 15px;
+
+            border-radius: 5px;
+
             font-size: 11px;
         }
 
@@ -436,65 +569,85 @@
 
         .patents-grid {
             display: grid;
+
             grid-template-columns: repeat(2, 1fr);
+
             gap: 25px;
         }
 
         .patent-card {
-            background: #111625;
+            background: white;
+
+            border: 1px solid #e2e8f0;
+
+            border-radius: 12px;
+
             padding: 28px;
-            border-radius: 18px;
-            border: 1px solid rgba(255,255,255,0.07);
         }
 
         .patent-card h3 {
-            color: #ffffff;
+            color: #102a43;
+
             margin-bottom: 12px;
         }
 
-        .patent-card p {
-            color: #aeb4c0;
-            font-size: 14px;
+        .patent-card h3 i {
+            color: #0f766e;
+
+            margin-right: 10px;
         }
 
-        .patent-card i {
-            color: #6c63ff;
-            margin-right: 10px;
+        .patent-card p {
+            color: #627d98;
+
+            font-size: 14px;
         }
 
 
         /* =========================
-           ACCOMPLISHMENTS
+           ACHIEVEMENTS
         ========================= */
 
         .achievement-list {
             max-width: 900px;
+
             margin: auto;
         }
 
         .achievement {
             display: flex;
+
             gap: 20px;
-            background: #111625;
+
+            background: white;
+
             padding: 22px;
-            border-radius: 15px;
+
+            border-radius: 10px;
+
             margin-bottom: 15px;
-            border-left: 3px solid #6c63ff;
+
+            border-left: 3px solid #0f766e;
+
+            box-shadow: 0 5px 20px rgba(15, 23, 42, 0.04);
         }
 
         .achievement i {
-            color: #6c63ff;
-            font-size: 24px;
+            color: #0f766e;
+
+            font-size: 22px;
+
             margin-top: 4px;
         }
 
         .achievement p {
-            color: #b7bdc9;
+            color: #627d98;
+
             font-size: 14px;
         }
 
         .achievement strong {
-            color: white;
+            color: #102a43;
         }
 
 
@@ -504,46 +657,76 @@
 
         .contact-box {
             max-width: 800px;
+
             margin: auto;
+
             text-align: center;
-            background: #111625;
-            border: 1px solid rgba(255,255,255,0.07);
-            border-radius: 20px;
+
+            background: #102a43;
+
+            border-radius: 14px;
+
             padding: 45px 25px;
+
+            color: white;
         }
 
         .contact-box h3 {
             font-size: 28px;
+
             margin-bottom: 12px;
         }
 
         .contact-box p {
-            color: #aeb4c0;
+            color: #bcccdc;
+
             margin-bottom: 25px;
+        }
+
+        .contact-box .btn-outline {
+            background: transparent;
+
+            color: white;
+
+            border-color: #829ab1;
+        }
+
+        .contact-box .btn-outline:hover {
+            color: white;
+
+            border-color: #0f766e;
+
+            background: #0f766e;
         }
 
         .social-links {
             display: flex;
+
             justify-content: center;
+
             gap: 15px;
-            flex-wrap: wrap;
         }
 
         .social-links a {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
+            width: 46px;
+            height: 46px;
+
+            border-radius: 7px;
+
+            background: #243b53;
+
             display: flex;
+
             justify-content: center;
             align-items: center;
-            background: #1b2133;
-            color: white;
+
             transition: 0.3s;
         }
 
         .social-links a:hover {
-            background: #6c63ff;
-            transform: translateY(-4px);
+            background: #0f766e;
+
+            transform: translateY(-3px);
         }
 
 
@@ -552,30 +735,45 @@
         ========================= */
 
         footer {
-            border-top: 1px solid rgba(255,255,255,0.07);
+            border-top: 1px solid #e2e8f0;
+
             text-align: center;
+
             padding: 25px;
-            color: #7f8795;
+
+            color: #829ab1;
+
             font-size: 13px;
+
+            background: white;
         }
 
 
         /* =========================
-           RESPONSIVE
+           MOBILE
         ========================= */
 
         @media (max-width: 850px) {
 
             .nav-links {
                 position: absolute;
+
                 top: 75px;
                 left: 0;
+
                 width: 100%;
-                background: #0b0f19;
+
+                background: #f8fafc;
+
                 flex-direction: column;
+
                 align-items: center;
+
                 padding: 25px 0;
+
                 display: none;
+
+                border-bottom: 1px solid #e2e8f0;
             }
 
             .nav-links.active {
@@ -588,11 +786,19 @@
 
             .hero {
                 grid-template-columns: 1fr;
+
                 text-align: center;
+
+                gap: 40px;
+            }
+
+            .hero-card {
+                order: -1;
             }
 
             .hero-text p {
                 margin-left: auto;
+
                 margin-right: auto;
             }
 
@@ -600,17 +806,10 @@
                 justify-content: center;
             }
 
-            .hero-card {
-                order: -1;
-            }
+            .profile-frame {
+                width: 280px;
 
-            .profile-circle {
-                width: 220px;
-                height: 220px;
-            }
-
-            .profile-circle i {
-                font-size: 80px;
+                height: 330px;
             }
 
             .about-content {
@@ -633,39 +832,38 @@
 
         @media (max-width: 550px) {
 
-            .container {
-                width: 92%;
-            }
-
             .skills-grid {
                 grid-template-columns: 1fr;
             }
 
             .hero-text h1 {
-                font-size: 42px;
+                font-size: 43px;
+            }
+
+            .hero-text h2 {
+                font-size: 21px;
             }
 
             .section-title h2 {
-                font-size: 28px;
+                font-size: 29px;
             }
 
-            .profile-circle {
-                width: 190px;
-                height: 190px;
-            }
+            .profile-frame {
+                width: 240px;
 
+                height: 290px;
+            }
         }
 
     </style>
+
 </head>
 
 
 <body>
 
 
-<!-- =========================
-     NAVBAR
-========================= -->
+<!-- ================= NAVBAR ================= -->
 
 <header>
 
@@ -709,9 +907,7 @@
 
 
 
-<!-- =========================
-     HOME
-========================= -->
+<!-- ================= HOME ================= -->
 
 <section id="home">
 
@@ -740,13 +936,19 @@
                 <div class="hero-buttons">
 
                     <a href="#projects" class="btn btn-primary">
+
                         <i class="fas fa-code"></i>
+
                         View Projects
+
                     </a>
 
                     <a href="#contact" class="btn btn-outline">
+
                         <i class="fas fa-envelope"></i>
+
                         Contact Me
+
                     </a>
 
                 </div>
@@ -754,11 +956,14 @@
             </div>
 
 
+            <!-- ================= PHOTO ================= -->
+
             <div class="hero-card">
 
-                <div class="profile-circle">
+                <div class="profile-frame">
 
-                    <img src="Shazi.jpeg" alt="Neha Shazneen">
+                    <img src="neha.jpeg"
+                         alt="Neha Shazneen">
 
                 </div>
 
@@ -772,9 +977,7 @@
 
 
 
-<!-- =========================
-     ABOUT
-========================= -->
+<!-- ================= ABOUT ================= -->
 
 <section id="about">
 
@@ -790,6 +993,7 @@
 
 
         <div class="about-content">
+
 
             <div class="about-card">
 
@@ -818,11 +1022,6 @@
                 <ul class="info-list">
 
                     <li>
-                        <i class="fas fa-location-dot"></i>
-                        Warangal, Telangana, India
-                    </li>
-
-                    <li>
                         <i class="fas fa-graduation-cap"></i>
                         B.Tech - Computer Science and Engineering
                     </li>
@@ -834,12 +1033,17 @@
 
                     <li>
                         <i class="fas fa-chart-line"></i>
-                        CGPA: 6.5
+                        CGPA: 6
                     </li>
 
                     <li>
                         <i class="fas fa-envelope"></i>
                         shazneenneha716@gmail.com
+                    </li>
+
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        9346549595
                     </li>
 
                 </ul>
@@ -854,9 +1058,7 @@
 
 
 
-<!-- =========================
-     EXPERIENCE
-========================= -->
+<!-- ================= EXPERIENCE ================= -->
 
 <section id="experience">
 
@@ -873,25 +1075,24 @@
 
         <div class="experience-card">
 
-            <h3>1Stop.ai (Fox Trading)</h3>
+            <h3>Machine Learning Internship</h3>
 
-            <h4>Machine Learning Intern (Remote)</h4>
+            <h4>1Stop.ai</h4>
 
             <div class="experience-date">
-                Jun 2026 – Jul 2026
+                Internship Experience
             </div>
 
             <ul>
 
                 <li>
-                    Developed Machine Learning projects involving data
-                    preprocessing, feature engineering, model training
-                    and evaluation.
+                    Worked on Machine Learning projects involving
+                    data preprocessing, model development and evaluation.
                 </li>
 
                 <li>
-                    Collaborated with mentors to deliver project milestones
-                    using Python and Scikit-learn.
+                    Applied Python and Machine Learning concepts
+                    to practical project requirements.
                 </li>
 
             </ul>
@@ -904,9 +1105,7 @@
 
 
 
-<!-- =========================
-     SKILLS
-========================= -->
+<!-- ================= SKILLS ================= -->
 
 <section id="skills">
 
@@ -916,7 +1115,7 @@
 
             <h2>Technical <span>Skills</span></h2>
 
-            <p>Technologies and tools I work with</p>
+            <p>Technologies and tools</p>
 
         </div>
 
@@ -931,7 +1130,7 @@
                 <h3>Programming</h3>
 
                 <p>
-                    Python, C
+                    Python, Java, C
                 </p>
 
             </div>
@@ -944,20 +1143,7 @@
                 <h3>Databases</h3>
 
                 <p>
-                    SQL, PL/SQL
-                </p>
-
-            </div>
-
-
-            <div class="skill-card">
-
-                <i class="fas fa-globe"></i>
-
-                <h3>Web</h3>
-
-                <p>
-                    HTML, CSS, JavaScript
+                    MongoDB, Oracle DB
                 </p>
 
             </div>
@@ -967,10 +1153,10 @@
 
                 <i class="fas fa-brain"></i>
 
-                <h3>Libraries</h3>
+                <h3>AI & Machine Learning</h3>
 
                 <p>
-                    NumPy, Pandas, OpenCV, Scikit-learn
+                    Machine Learning, Computer Vision
                 </p>
 
             </div>
@@ -978,12 +1164,25 @@
 
             <div class="skill-card">
 
-                <i class="fas fa-tools"></i>
+                <i class="fas fa-chart-column"></i>
+
+                <h3>Data</h3>
+
+                <p>
+                    Data Analytics
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <i class="fas fa-laptop-code"></i>
 
                 <h3>Tools</h3>
 
                 <p>
-                    Git, GitHub, VS Code
+                    VS Code, Jupyter Notebook
                 </p>
 
             </div>
@@ -991,16 +1190,15 @@
 
             <div class="skill-card">
 
-                <i class="fas fa-book"></i>
+                <i class="fas fa-users"></i>
 
-                <h3>Coursework</h3>
+                <h3>Soft Skills</h3>
 
                 <p>
-                    DSA, DBMS, OS, CN, OOP
+                    Leadership, Teamwork, Problem Solving, Communication
                 </p>
 
             </div>
-
 
         </div>
 
@@ -1010,9 +1208,7 @@
 
 
 
-<!-- =========================
-     PROJECTS
-========================= -->
+<!-- ================= PROJECTS ================= -->
 
 <section id="projects">
 
@@ -1022,7 +1218,7 @@
 
             <h2>My <span>Projects</span></h2>
 
-            <p>Some of my featured work</p>
+            <p>Selected projects</p>
 
         </div>
 
@@ -1030,79 +1226,63 @@
         <div class="projects-grid">
 
 
-            <!-- Project 1 -->
-
             <div class="project-card">
 
                 <div class="project-icon">
-
                     <i class="fas fa-hospital"></i>
-
                 </div>
 
                 <h3>
-                    Hospital Bed and Resource Orchestrator
+                    Hospital Bed & Resource Orchestrator
                 </h3>
 
                 <p>
-                    Developed a real-time dashboard for ICU bed availability,
-                    ambulance tracking and emergency resource allocation.
-                    Improved emergency response by enabling efficient
-                    allocation of hospital resources.
+                    Developed a hospital resource management solution
+                    for monitoring bed availability, ventilators,
+                    oxygen resources, specialized staff and ambulance
+                    routing during emergencies.
                 </p>
 
                 <div class="tech">
-
-                    <span>Python</span>
-                    <span>Flask</span>
-                    <span>MySQL</span>
-
+                    <span>AI</span>
+                    <span>Healthcare</span>
+                    <span>Resource Management</span>
                 </div>
 
             </div>
 
 
 
-            <!-- Project 2 -->
-
             <div class="project-card">
 
                 <div class="project-icon">
-
-                    <i class="fas fa-triangle-exclamation"></i>
-
+                    <i class="fas fa-seedling"></i>
                 </div>
 
                 <h3>
-                    Disaster Alert & Risk Zone Visualizer
+                    FarmPilot
                 </h3>
 
                 <p>
-                    Built an interactive dashboard for disaster risk
-                    visualization using real-time monitoring. Improved
-                    situational awareness through data-driven visual analytics.
+                    An AI-powered agriculture problem-solving agent
+                    designed to assist farmers with practical farming
+                    challenges using relevant agricultural information.
                 </p>
 
                 <div class="tech">
-
-                    <span>Python</span>
-                    <span>Plotly</span>
-                    <span>Pandas</span>
-
+                    <span>AI</span>
+                    <span>Agent Hub</span>
+                    <span>Agriculture</span>
                 </div>
 
             </div>
 
 
 
-            <!-- Project 3 -->
-
             <div class="project-card">
 
                 <div class="project-icon">
-
                     <i class="fas fa-graduation-cap"></i>
-
                 </div>
 
                 <h3>
@@ -1110,31 +1290,25 @@
                 </h3>
 
                 <p>
-                    Developed and evaluated machine learning models for
-                    predicting student academic performance. Analyzed academic
-                    and demographic factors to support performance prediction.
+                    Developed a machine learning based system for
+                    predictive analysis of student academic performance
+                    using the UCI Student Performance Dataset.
                 </p>
 
                 <div class="tech">
-
                     <span>Python</span>
-                    <span>Scikit-learn</span>
                     <span>Machine Learning</span>
-
+                    <span>Scikit-learn</span>
                 </div>
 
             </div>
 
 
 
-            <!-- Project 4 -->
-
             <div class="project-card">
 
                 <div class="project-icon">
-
                     <i class="fas fa-eye"></i>
-
                 </div>
 
                 <h3>
@@ -1142,16 +1316,15 @@
                 </h3>
 
                 <p>
-                    Built a real-time driver drowsiness detection system
-                    using facial landmarks. Triggered instant alerts to
-                    improve road safety.
+                    Developed a computer vision based system for
+                    detecting driver drowsiness and providing alerts
+                    to improve road safety.
                 </p>
 
                 <div class="tech">
-
                     <span>Python</span>
                     <span>OpenCV</span>
-
+                    <span>Computer Vision</span>
                 </div>
 
             </div>
@@ -1165,9 +1338,7 @@
 
 
 
-<!-- =========================
-     PATENTS
-========================= -->
+<!-- ================= PATENTS ================= -->
 
 <section id="patents">
 
@@ -1188,13 +1359,16 @@
             <div class="patent-card">
 
                 <h3>
+
                     <i class="fas fa-lightbulb"></i>
+
                     Inventory Management Device
+
                 </h3>
 
                 <p>
-                    Designed a smart inventory monitoring system using sensors
-                    and automation. Integrated imaging units and robotic trays
+                    Designed a smart inventory monitoring solution
+                    involving sensors, imaging units and robotic trays
                     for efficient inventory handling.
                 </p>
 
@@ -1204,14 +1378,17 @@
             <div class="patent-card">
 
                 <h3>
+
                     <i class="fas fa-car"></i>
+
                     Automated Vehicle Towing System
+
                 </h3>
 
                 <p>
-                    Designed an intelligent system for automatic vehicle
-                    detection. Enabled automated towing of vehicles parked
-                    beyond designated boundary limits.
+                    Designed an automated vehicle detection and towing
+                    system for vehicles parked beyond designated
+                    boundary limits.
                 </p>
 
             </div>
@@ -1225,9 +1402,7 @@
 
 
 
-<!-- =========================
-     ACCOMPLISHMENTS
-========================= -->
+<!-- ================= ACHIEVEMENTS ================= -->
 
 <section id="achievements">
 
@@ -1235,9 +1410,13 @@
 
         <div class="section-title">
 
-            <h2>Accomplishments & <span>Achievements</span></h2>
+            <h2>
+                Accomplishments & <span>Achievements</span>
+            </h2>
 
-            <p>Milestones and recognitions</p>
+            <p>
+                Milestones and recognitions
+            </p>
 
         </div>
 
@@ -1250,13 +1429,16 @@
                 <i class="fas fa-trophy"></i>
 
                 <p>
+
                     Led a winning team in the
                     <strong>Udbhava Hackathon</strong>
                     conducted by SR University, developing a Hospital
-                    Resource Orchestrator that enabled intelligent ambulance
-                    routing and real-time hospital resource management;
-                    secured <strong>First Place</strong> among 20+
-                    participating teams.
+                    Resource Orchestrator that enabled intelligent
+                    ambulance routing and real-time hospital resource
+                    management; secured
+                    <strong>First Place</strong>
+                    among 20+ participating teams.
+
                 </p>
 
             </div>
@@ -1267,10 +1449,16 @@
                 <i class="fas fa-medal"></i>
 
                 <p>
-                    Secured <strong>12th Rank</strong> in the
+
+                    Secured
+                    <strong>12th Rank</strong>
+                    in the
                     <strong>LaunchpadX Innovation Hackathon</strong>
-                    at <strong>SNIST, Hyderabad</strong>, among
+                    at
+                    <strong>SNIST, Hyderabad</strong>,
+                    among
                     <strong>219 teams</strong>.
+
                 </p>
 
             </div>
@@ -1281,10 +1469,15 @@
                 <i class="fas fa-robot"></i>
 
                 <p>
-                    Worked in the <strong>Agent Hub</strong> domain and
-                    developed <strong>FarmPilot</strong>, an AI-powered
-                    agriculture problem-solving agent designed to assist
-                    farmers with practical farming challenges.
+
+                    Worked in the
+                    <strong>Agent Hub</strong>
+                    domain and developed
+                    <strong>FarmPilot</strong>,
+                    an AI-powered agriculture problem-solving agent
+                    designed to assist farmers with practical farming
+                    challenges.
+
                 </p>
 
             </div>
@@ -1298,9 +1491,7 @@
 
 
 
-<!-- =========================
-     CONTACT
-========================= -->
+<!-- ================= CONTACT ================= -->
 
 <section id="contact">
 
@@ -1308,41 +1499,52 @@
 
         <div class="section-title">
 
-            <h2>Get In <span>Touch</span></h2>
+            <h2>
+                Get In <span>Touch</span>
+            </h2>
 
-            <p>Let's connect and build something meaningful</p>
+            <p>
+                Let's connect
+            </p>
 
         </div>
 
 
         <div class="contact-box">
 
-            <h3>Let's Connect</h3>
+            <h3>
+                Let's Connect
+            </h3>
 
             <p>
-                Feel free to reach out to me for opportunities,
-                collaborations or project discussions.
+                Feel free to reach out for opportunities,
+                collaborations and project discussions.
             </p>
-
-
-            <div class="hero-buttons"
-                 style="justify-content:center; margin-bottom:25px;">
-
-                <a href="mailto:shazneenneha716@gmail.com"
-                   class="btn btn-primary">
-
-                    <i class="fas fa-envelope"></i>
-
-                    Email Me
-
-                </a>
-
-            </div>
 
 
             <div class="social-links">
 
-                <!-- LinkedIn -->
+                <!-- PHONE -->
+
+                <a href="tel:9346549595"
+                   title="Phone">
+
+                    <i class="fas fa-phone"></i>
+
+                </a>
+
+
+                <!-- EMAIL -->
+
+                <a href="mailto:shazneenneha716@gmail.com"
+                   title="Email">
+
+                    <i class="fas fa-envelope"></i>
+
+                </a>
+
+
+                <!-- LINKEDIN -->
 
                 <a href="https://linkedin.com/in/neha-shazneen-846126351"
                    target="_blank"
@@ -1353,33 +1555,13 @@
                 </a>
 
 
-                <!-- GitHub -->
+                <!-- GITHUB -->
 
                 <a href="https://github.com"
                    target="_blank"
                    title="GitHub">
 
                     <i class="fab fa-github"></i>
-
-                </a>
-
-
-                <!-- Email -->
-
-                <a href="mailto:shazneenneha716@gmail.com"
-                   title="Email">
-
-                    <i class="fas fa-envelope"></i>
-
-                </a>
-
-
-                <!-- Phone -->
-
-                <a href="tel:9346549595"
-                   title="Phone">
-
-                    <i class="fas fa-phone"></i>
 
                 </a>
 
@@ -1393,9 +1575,7 @@
 
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
@@ -1407,9 +1587,7 @@
 
 
 
-<!-- =========================
-     JAVASCRIPT
-========================= -->
+<!-- ================= JAVASCRIPT ================= -->
 
 <script>
 
@@ -1418,7 +1596,7 @@
     const navLinks = document.getElementById("navLinks");
 
 
-    menuBtn.addEventListener("click", function() {
+    menuBtn.addEventListener("click", function () {
 
         navLinks.classList.toggle("active");
 
@@ -1427,7 +1605,7 @@
 
     document.querySelectorAll(".nav-links a").forEach(link => {
 
-        link.addEventListener("click", function() {
+        link.addEventListener("click", function () {
 
             navLinks.classList.remove("active");
 
@@ -1439,4 +1617,5 @@
 
 
 </body>
+
 </html>
